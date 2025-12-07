@@ -1,0 +1,74 @@
+---
+title: "JAMELI ROMANI S15-TAREA SEMANA 12"
+author: "JAMELI ROMANI MANCO"
+format: html
+editor: visual
+---
+
+## SEMANA 12
+
+## PASO 1
+
+#MEDIDA DE DISPERSION
+
+#VARIANZA
+
+```{r}
+var(data$Bilirrubina,na.rm = TRUE)
+```
+
+PASO 2
+
+#MEDIDA DE DISPERSION
+
+#DESVIACION ESTANDAR
+
+```{r}
+sd(data$Bilirrubina,na.rm = TRUE)
+```
+
+PASO 3:
+
+#MEDIDA DE DISPERSION
+
+#RANGO
+
+```{r}
+range(data$Bilirrubina,na.rm = TRUE)
+```
+
+PASO 4
+
+#MEDIDA DE DISPERSION
+
+#RANGO INTERCUARTILICO
+
+```{r}
+IQR(data$Bilirrubina,na.rm = TRUE)
+```
+
+PASO 5
+
+#MEDIDA DE POSICION
+
+#CUARTILES
+
+```{r}
+quantile(data$Bilirrubina)
+```
+
+PASO 6
+
+#VISULIZAMOS LAS PRIMERAS 6 FILAS
+
+```{r}
+head(data,6)
+```
+
+PASO 7
+
+#VISUALIZAMOS EL RESUMEN DE DICHAS MEDIDAS
+
+```{r}
+summary(data)
+```

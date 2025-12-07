@@ -1,0 +1,65 @@
+---
+title: "JAMELI ROMANI S15-TAREA SEMANA 14"
+author: "JAMELI ROMANI MANCO"
+format: html
+editor: visual
+---
+
+## SEMANA 14
+
+## PASO 1:
+
+#VAMOS A ORGANIZAR UN EJEMPLO EN LA QUE SERIA LA CARRERA DE ENFERMERIA #CARCAGAMOS LA DATA CIRROSIS
+
+```{r}
+data<- read_csv("C:/Users/PC/Downloads/cirrosis (2).csv")
+View(cirrosis_2_)
+```
+
+PASO 2
+
+#VAMOS A CREAR UN DATASET SIMULAD PARA EL EJEMPLO DE RSTUDIO
+
+#CARGAR DATOS (SE CREA DATASET)
+
+#DATASET
+
+```{r}
+set.seed(123)
+n<-100
+IMC<-rnorm(n,27,4)
+PAS<-90+1.5*IMC+rnorm(n,0.8)
+datos <-data.frame(IMC,PAS)
+head(datos)
+```
+
+PASO 3
+
+#LUEGO SE DEBE ADJUNTAR EL MODELO UNIVARIADO DE LOS DATOS
+
+#AJUSTAR MODELO
+
+```{r}
+modelo_uni <- lm (PAS ~ IMC, data = datos)
+summary(modelo_uni)
+```
+
+PASO 4
+
+```{r}
+#SE REALIZA UNA INTERPRETACION CON RESPECTO A LOS RESULTADOS OBTENIDOS SEGUN EL INTERCAMBIO Y LA DEPENDIENTE
+#INTERPRETACION ESPERADA
+#INTERCEPTO (β0): PAS CUANDO IMC = O(no tiene sentido clinico, pero sirve para modelo)
+#PENDIENTE(β1): EJ: β1 = 1.5
+```
+
+PASO 5
+
+#LUEGO SE COPIA Y PEGA EL CODIGO "PLOT (DATA)" Y "ABLINE(MODELO_UNI)" QUE SE VISULIZA EN
+
+#GRAFICA #GRAFICO
+
+```{r}
+plot(datos$IMC, datos$PAS, main = "PAS VS IMC" , xlab = "IMC" , ylab = "PAS")
+abline(modelo_uni , lwd=2)
+```
